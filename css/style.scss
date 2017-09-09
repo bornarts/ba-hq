@@ -4,15 +4,7 @@
 @import '../_sass/syntax-highlighting';
 
 
-$scotch-primary: rgb(255, 69, 69);
-$scotch-secondary: #FF7B7B;
-
-%oswald { font-family: 'Oswald', sans-serif; }
-%roboto { font-family: 'Roboto Condensed', sans-serif; }
-
-
 body {
-    @extend %roboto;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -22,57 +14,78 @@ body, html {
     width: 100%;
     margin: 0px;
     background-color: rgba(0, 0, 0, 1);
+    font-family: 'Alegreya', serif;
     overflow-x: hidden;
+}
+
+.container-fluid {
+    padding: 0px !important;
 }
 
 .splash {
     position: relative;
-    width: 1920px;
+    width: 100%;
     height: 100vh;
-}
-
-.bg {
-    background-image: url('../graphics/splash-bg.png');
+    background-image: url('../graphics/splash-bg2.jpg');
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: auto 100%;
+    background-position: center top;
+    background-size: 100vw auto;
     background-attachment: fixed;
 }
 
+.fullscreen {
+    position: relative;
+    width: 100%;
+    height: 99vh;
+}
+
+.bg {
+    background-image: url('../graphics/splash-bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    background-attachment: fixed;
+}
+
+.rowbg {
+    background-color: rgba(0, 0, 0, .3);
+}
+
 .masthead {
-    position: fixed;
-    width: 800px;
-    height: 100vh;
-    top: 90px;
-    left: 90px;
-    background: url('../graphics/stagestop-logo-masthead-lg.png') left top no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 211px;
+    top: -75vh;
+    background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
     background-size: 597px 211px; 
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    z-index: 101;
+    z-index: 150;
 }
 
-.cover {
-    position: relative;
-    height: 100vh;
-    background-color: transparent;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 100% auto;
+.coverspacer {
+    width: 250px;
 }
 
 .section {
     position: relative;
-    height: auto;
-    min-height: 100vh;
-    background-color: transparent;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    top: 0px;
+    right: 0px;
+    min-height: 99vh;
     padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+}
+
+.section2 {
+    position: relative;
+    top: 0px;
+    left: 10px;
+    min-height: 99vh;
+    padding-top: 250px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
@@ -80,28 +93,42 @@ body, html {
 
 .section div {
     position: relative;
-    background-color: inherit;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 25px;
 }
 
-.section p, ul, h1, h2, h3, h4, h5 {
+.section h1, .section h2, .section h4, .section h5 {
     position: relative;
-    width: 100%;
+    width: 90%;
     min-width: 290px;
-    max-width: 800px;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto; 
-    font-size: 14pt;
+    margin-right: auto;
+    margin-bottom: 30px; 
+}
+
+.section ul, .section h3 {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px; 
+}
+
+.section p {
+    position: relative;
+    width: 90%;
+    min-width: 290px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px !important; 
 }
 
 .section ul {
-    position: relative;
-    width: 100%;
-    min-width: 200px;
-    max-width: 800px;
-    padding-right: 25px;
     font-weight: normal;
     font-size: 12pt;
     text-indent: 0px;
@@ -112,17 +139,64 @@ body, html {
     margin-bottom: 15px;
 }
 
+.storeinfo {
+        position: relative;
+        width: 350px;
+        font-family: 'Alegreya', serif;
+        font-size: 14pt;
+        text-indent: 0px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgba(255, 255, 255, 1);
+}
+
+.sectionfooter {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: url('/graphics/stagestoplogo-minified.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    z-index: 1;
+}
+
+.rangeinfo {
+    min-width: 320px;
+    max-width: 710px;
+    height: 400px;
+    background-image: url('/graphics/indoorrange.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    overflow: visible;
+}
+
 .footer {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: auto;
     right: 0px;
     bottom: 0px;
-    padding-top: 15px;
+    padding-left: 50px;
     background-color: rgba(0, 0, 0, .8);
     border-top: dashed 1px rgba(244, 123, 32, 1);
+    font-size: 12px;
     text-align: center;
     z-index: 99;
+}
+
+.footer p {
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 0px;
 }
 
 
@@ -130,19 +204,39 @@ p {
     font-family: 'Alegreya', serif;
     font-size: 14pt;
     text-indent: 10px;
-    color: rgba(255, 255, 255, 1)
+    color: rgba(255, 255, 255, 1);
+}
+
+a {
+    width: 100vw;
+    font-size: 18px;
+    color: rgba(244, 123, 32, 1);
+    transition: color 1s ease;
+}
+
+a:hover {
+    width: 100vw;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    
 }
 
 hr {
-    width: 70%;
-    height: 100px;
-    background-color: transparent;
+    width: 100%;
+    max-width: 700px;
+    height: 150px;
     background-image: url('../graphics/hr1.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% auto;
     border: none;
     opacity: .08;
+}
+
+.vr {
+    position: relative;
+    border-right: solid 2px rgba(255, 255, 255, .2); 
 }
 
 h1 {
@@ -174,13 +268,13 @@ h3 {
 h4 {
     font-family: 'Alegreya', serif;
     font-weight: normal;
-    font-size: 36pt;
+    font-size: 14pt;
     text-align: center;
     color: rgba(244, 123, 32, 1);
 }
 
 h5 {
-    position: relative;;
+    position: relative;
     font-family: 'Alegreya', serif;
     font-weight: normal;
     font-size: 16pt;
@@ -189,43 +283,283 @@ h5 {
     color: rgba(244, 123, 32, 1);
 }
 
+
+
+/*!=============NAVIGATION STYLES=================*/
 .navbar {
     width: 250px;
     height: 100vh;
     top: 0px;
     background-color: rgba(0, 0, 0, .8);
-    padding-top: 30vh;
+    padding-top: 5vh;
     border-right: dashed 1px rgba(244, 123, 32, 1);
-    z-index: 100;
+    z-index: 200;
     overflow-x: hidden;
-    cursor: pointer;
+    transition: background-color .35s ease;
 }
 
-.navbar a {
-    font-family: 'Alegreya', serif;
-    width: 250px;
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.nav a {
+    background-color: rgba(244, 123, 32, 0) !important;
+    transition: background-color 2s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(244, 123, 32, 1) !important;
+    color: rgba(0, 0, 0, 1);
+}
+
+.open {
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.drop:hover .open {
+    height: 40px;
+}
+
+.soc {
+    position: relative;
+    list-style: none;
+}
+
+.soc li {
+    position: relative;
+    margin: 5px;
+    margin-top: 12px;
+    display: inline;
+    float: left;
+}
+
+.soc img {
+    position: relative;
+    width: auto;
+    height: 50px;
+}
+
+.gallerynav {
+    position: relative;
+    width: 100%;
     height: auto;
+    margin-top: 50px;
+    padding-left: 250px;
+    z-index: 1;
+}
+
+.gallerynav p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+.gallerynav ul {
+    position: relative;
+    width: 100%;  
+    list-style-type: none;
+}
+
+.gallerynav li {
+    position: relative;
+    max-width: 300px;
+    display: inline;
+    float: left;
+}
+
+.gallerynav img {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rangegallery img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    transition: all .35s ease-in-out;
+}
+
+.rangegallery img:active {
+    position: fixed;
+    width: 400px;
+    height: auto;
+    right: 25vh;
+    top: 40vh;
+    margin: 10px;
+    clear: both;
+    z-index: 200;
+}
+
+
+/*!=============END NAVIGATION=================*/
+
+/*!=============GUN DISPLAY STYLES=================*/
+
+.gundisplay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 300;
+}
+
+.gundisplay img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+.gundisplay p {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.closebtn {
+    position: relative;
+    left: 0px;
+    text-align: left;
+}
+
+/*!=============END GUN DISPLAY STYLES=================*/
+
+/*!=============HERO=================*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 768px;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: black 10px 10px 40px;
+}
+
+.carousel-indicators {
+    bottom: 0px !important;
+}
+
+/*!=============END HERO=================*/
+
+
+/*!=============EMAIL STYLE=================*/
+
+.fldsz {
+    position: relative;
+    width: 90%;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.send-btn {
+    color: rgba(255, 255, 255, 1);
+}
+
+input, textarea {
     background-color: transparent;
-    outline: none;
+    color: rgba(100, 100, 100, 1);
+    border: dashed .5px rgba(244, 123, 32, 1);
+    padding: 5px;
+    transition: all .35s ease;
 }
 
-a:hover {
-    width: 250px;
-    height: auto;
-    background-color: rgba(244, 123, 32, 1);
-    outline: none;
+input:active, textarea:active {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: solid .5px rgba(244, 123, 32, 1);
+    padding: 5px;
+}
+
+input:hover, textarea:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: solid .5px rgba(244, 123, 32, 1);
+    padding: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.center-form {
+    margin: 0 auto;
+}
+
+/*!=============EMAIL STYLE END=================*/
+
+/*!=============MEMBERSHIP STYLES=================*/
+
+
+.table-striped {
+    background-color: rgba(255, 255, 255, .03) !important;
 }
 
 
 
-@media only screen and (max-width : 991px) {
+/*!=============END MEMBERSHIP STYLES=================*/
+
+/*!=============SPLASH STYLES=================*/
+
+.spacer {
+    position: relative;
+    width: 100%;
+    height: 32vh;
+}
+
+.spacer-black {
+    position: relative;
+    width: 100%;
+    height: 33vh;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 35px;
+    border-top: dashed .5px rgba(244, 123, 32, 1);
+    border-bottom: dashed .5px rgba(244, 123, 32, 1);
+    overflow: hidden;
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    height: 211px;
+    background: url('../graphics/stagestop-logo-masthead-lg.png') center top no-repeat;
+    background-size: 597px 211px; 
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.tagline {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: rgba(244, 123, 32, 1);
+}
+
+/*!=============END SPLASH STYLES=================*/
+
+
+@media only screen and (max-width : 990px) {
 pre {
         margin-left: 0;
         margin-right: 0;
     }
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 768px) {
     .tile .featurette, .topper {
         height: 300px;
     }
@@ -246,7 +580,7 @@ pre {
     }
 
 .bg {
-    background-image: url('../graphics/splash-bg.png');
+    background-image: url('../graphics/splash-bg2.jpg');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: auto 100%;
@@ -254,24 +588,69 @@ pre {
 }
 
 .navbar {
-    width: 100%;
+    width: 100vw;
     height: auto;
-    top: 0px;
-    background-color: rgba(0, 0, 0, .95);
-    padding-top: 0vh;
+    background-color: rgba(0, 0, 0, .8);
+    padding-top: 0px;
     border-bottom: dashed 1px rgba(244, 123, 32, 1);
     border-right: none;
+    z-index: 101;
 }
+
+.navbar button {
+    border: solid 1px rgba(244, 123, 32, 1);
+    margin-right: 30px;
+}
+
+.icon-bar {
+    background-color: rgba(244, 123, 32, 1);
+}
+
+.gallerynav {
+    padding-left: 0px;
+}
+
+.gallerynav img {
+    position: relative;
+    width: 250px;
+    left: -10px;
+}
+
+.gundisplay img:hover {
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    z-index: 301;
+}
+
 
 .cover {
     position: relative;
+    width: auto;
+    max-width: 960px;
     height: auto;
-    padding-top: 100px;
+    padding-top: 0px;
     background-color: transparent;
-    background-image: url();
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 100% auto;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    min-width: 0px;
+    height: auto;
+    top: 0px;
+    left: 0px;
+}
+
+.carousel-indicators {
+    bottom: 0px !important;
+    margin-bottom: 20px;
 }
 
 .masthead {
@@ -286,13 +665,53 @@ pre {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    z-index: 100;
+    z-index: 99;
+}
+
+.section {
+    position: relative;
+    width: auto;
+    max-width: 960px;
+    height: auto;
+    top: 0px;
+    min-height: 99vh;
+    background-color: rgba(0, 0, 0, .3);
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    z-index: 1;
+}
+
+/*!=============NAVIGATION STYLES=================*/
+
+#bm {
+    position: relative;
+    height: 100px;
 }
 
 .footer {
-    padding-top: 5px;
-
+    position: relative;
+    width: 100%;
+    height: auto;
+    right: 0px;
+    bottom: 0px;
+    padding-left: 0px;
+    background-color: rgba(0, 0, 0, .8);
+    border-top: dashed 1px rgba(244, 123, 32, 1);
+    font-size: 12px;
+    text-align: center;
+    z-index: 99;
 }
+
+.footer p {
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+
 
 hr {
     width: 100%;
@@ -304,6 +723,18 @@ hr {
     background-size: 100% auto;
     border: none;
     opacity: .8;
+}
+
+.vr {
+    position: relative;
+    border-right: none;
+    border-bottom: solid 2px rgba(255, 255, 255, .2); 
+}
+
+.sectionfooter {
+    position: relative;
+    width: 100%;
+    height: 50px;
 }
 
 }
