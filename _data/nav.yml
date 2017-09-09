@@ -5,38 +5,15 @@
 - title: "About"
   href: "/about/#bm"
 
-- title: "Indoor Range"
-  url: "/indoorrange/#bm"
+- title: "Case Studies"
+  url: "/cases/#bm"
   subcategories:
-    - subtitle: "Membership"
-      subhref: "/membership/#bm"
-    - subtitle: "Shooting Range"
-      subhref: "/shooting/#bm"
-    - subtitle: "Archery Range"
-      subhref: "/archery/#bm"
-
-- title: "Training"
-  href: "/training/#bm"
-
-- title: "Featured Guns"
-  href: "/featured/#bm"
-
-- title: "Sell & Trade"
-  href: "/sell/#bm"
-
-- title: "Auctions & Transfers"
-  href: "/auctions/#bm"
-
-- title: "Events"
-  href: "/events/#bm"
-
-- title: "Galleries"
-  url: "#"
-  subcategories:
-    - subtitle: "Photos"
-      subhref: "/photos/#bm"
-    - subtitle: "Videos"
-      subhref: "/videos/#bm"  
+    - subtitle: "Untitled"
+      subhref: "#"
+    - subtitle: "Untitled"
+      subhref: "#"
+    - subtitle: "Untitled"
+      subhref: "#"
 
 - title: "Contact"
   href: "/contact/#bm"
