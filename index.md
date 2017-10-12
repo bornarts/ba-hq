@@ -1,7 +1,7 @@
 ---
-layout: contact
-title: Contact
-permalink: /contact/
+layout: defaultpage
+title: Home
+permalink: /
 ---
 
 Your local Shooting Sports, Archery and Fishing headquarters!!!!
@@ -37,3 +37,4 @@ According to the Archery Trade Association, 23.8 million Americans enjoyed arche
         
 
         
+

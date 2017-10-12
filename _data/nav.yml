@@ -1,19 +1,12 @@
 
 - title: "Home"
-  href: "/home/"
+  href: "/"
+
+- title: "Blog"
+  href: "/blog/"
 
 - title: "About"
-  href: "/about/#bm"
-
-- title: "Case Studies"
-  url: "/cases/#bm"
-  subcategories:
-    - subtitle: "Untitled"
-      subhref: "#"
-    - subtitle: "Untitled"
-      subhref: "#"
-    - subtitle: "Untitled"
-      subhref: "#"
+  href: "/about/"
 
 - title: "Contact"
-  href: "/contact/#bm"
+  href: "/contact/"

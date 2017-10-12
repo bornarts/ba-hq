@@ -1,18 +1,15 @@
 {% include header.html %}
 
-
-
-{% include title-group.html %}
-
+	{% include title-group.html %}
 <div class="row rowbg">
 		
-						<div class="col-lg-2 section"></div>
+						<div class="col-lg-3"></div>
 		
-						<div id="bm" class="col-lg-6 section">
+						<div id="bm" class="col-lg-6 section top-margin-offset">
 							
 							<h1>CONTACT US</h1>
 
-							<form  action="//formspree.io/#@bornarts.us" method="POST">
+							<form  class="center-form" action="//formspree.io/info@ssgs.us" method="POST">
 								<fieldset>
 									<label class="fldsz" for="name">Name</label><br>
 									<input class="fldsz" type="text" name="name" placeholder="Name" id="name" required>
@@ -31,11 +28,17 @@
 								<input class="animated" type="reset" value="Reset">
 							</form>
 							 
+							<hr>
+
+						<div class="center-text">
+							{{ content }}
+						</div>
+							
 						</div>
 		
-						<div class="col-lg-4 section2">
+						<div class="col-lg-3">
 		
-							{{ content }}
+							
 
 						</div>
 </div>

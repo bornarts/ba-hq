@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta property='og:title' content="{{ page.title }}"/>
+    <meta property='og:image' content="{{ site.url }}{{ page.image }}" />
+    <meta property='og:description' content="{{ page.description }}" />
+    <meta property='og:url' content="{{ site.url }}{{ page.url }}" />
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.data.global.title }}  {{ site.data.global.description }}" href="/feed.xml">
@@ -38,29 +42,27 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/c9e663dc41.css">
+
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/site-imgs.css">
     <link rel="stylesheet" href="/css/animations.css">
-    <link rel="stylesheet" href="/css/membership.css">
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="{{ site.data.global.url }}/js/respond.min.js"></script>
     <![endif]-->
+
+    
 
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout-class %} layout-{{ page.layout-class }}{% endif %}">
 
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
-            <div class="navbar-header">
-                    
-                <ul class="soc">
-                    <li><a href="https://www.facebook.com/stagestopgunshop/" target="_blank"><img src="/graphics/soc-fb.png" /></a></li>
-                    <li><a href="https://www.instagram.com/stagestopgunshop/" target="_blank"><img src="/graphics/soc-instagram.png" /></a></li>
-                </ul>      
+            <div class="navbar-header">     
                 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -103,55 +105,7 @@
 <div class="container-fluid bg">
 
     <div class="row">
-					<div id="mainslide" class="carousel slide hero" data-ride="carousel"> 
-							<!-- indicators -->
-							<ol class="carousel-indicators">
-							   <li data-target="#mainslide" data-slide-to="0" class="active"></li>
-							   <li data-target="#mainslide" data-slide-to="1" ></li>
-							   <li data-target="#mainslide" data-slide-to="2" ></li>
-                               <li data-target="#mainslide" data-slide-to="3" ></li>
-                               <li data-target="#mainslide" data-slide-to="4" ></li>
-                               <li data-target="#mainslide" data-slide-to="5" ></li>
-							</ol>
-							 
-							 <!--slide wrapper -->
-							 <div class="carousel-inner" role="listbox">
-							 
-									<div class="row item active">
-										 <div class="col-lg-12">
-											<img src="/images/hero/hero1.jpg" />
-										 </div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero2.jpg" />
-										</div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero3.jpg" />		
-										</div>
-									</div>
-								 
-									<div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero4.jpg" />		
-										</div>
-                                    </div>
-                                    
-                                    <div class="row item">
-										<div class="col-lg-12">
-											<img src="/images/hero/hero5.jpg" />		
-										</div>
-                                    </div>
-                                    
-                                    <div class="row item">
-                                            <div class="col-lg-12">
-                                                <img src="/images/hero/hero6.jpg" />		
-                                            </div>
-                                        </div> 
-							 </div>
-					 </div>
-				</div>
+
+            {% include followus.html %}
+            
+					
